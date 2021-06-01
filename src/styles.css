@@ -1,0 +1,46 @@
+.main-background {
+    background-color: #395;
+}
+
+.body {
+  top: 0;
+  left: 0;
+  width:  100%;
+  height: 100%;
+  position: relative;
+}
+
+
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+ }
+ 
+ ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+ }
+ ::-webkit-scrollbar-thumb {
+  background: #778;
+  border-radius: 4px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+    background: #99a;
+ }
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poor+Story&display=swap'); */
+body {
+   font-family: 'Londrina Solid', 'Noto Serif KR';
+}
+
+.image-logo-naverlive {
+   background-image: url("/assets/images/logo_naverlive.png");
+   background-size: cover;
+}
+
+.image-logo-kakaolive {
+   background-image: url("/assets/images/logo_kakaolive.jpg");
+   background-size: cover;
+}

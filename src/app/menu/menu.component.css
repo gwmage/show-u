@@ -1,0 +1,25 @@
+.body {
+    background-color: #212121;
+    opacity: 1;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 0 0 0;
+}
+
+li {
+    color: #EEEEEE;
+    list-style: none;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.text-box {
+    top: 40px;
+    left: 40px;
+    position: relative;
+}

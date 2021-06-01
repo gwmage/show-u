@@ -1,0 +1,29 @@
+<div class='body main-background'>
+    <div class='title-txt top-margin'>show:u</div>
+    <div class='menu-btn top-margin' (click)="onClickMenuBtn()">＝</div>
+
+</div>
+
+<div class="neck">
+    <div class="neck-left">
+        <span class="text-btn"
+            (click)="onClickCategoryBtn(1)">
+            re:play
+        </span>
+    </div>
+    <div class="neck-center">
+        <span class="text-btn"
+            (click)="onClickCategoryBtn(2)">
+            on:live
+        </span>
+    </div>
+    <div class="neck-right">
+        <span class="text-btn"
+            (click)="onClickCategoryBtn(3)">
+            re:served
+        </span>        
+    </div>
+    <hr>
+    <div class="selected main-background"
+        [ngClass]="{'selected-position-1': target == 1, 'selected-position-2': target == 2, 'selected-position-3': target == 3 }"></div>
+</div>

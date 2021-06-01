@@ -1,0 +1,19 @@
+<app-header
+    class='header'
+    (onClickMenuBtnOut)="onClickMenuBtn($event)"
+    (onClickCategoryOut)="onClickCategory($event)">
+</app-header>
+
+<div class='body'>
+    <router-outlet></router-outlet>
+</div>
+
+<app-menu
+    class='menu'
+    [ngClass]="{
+        'menu-translate-negative' : menuOn,
+        'menu-translate-positive' : !menuOn
+    }"
+    (selectedMenu)="onChangeSelectedMenu($event)"
+    [userLevel]="userLevel">
+</app-menu>

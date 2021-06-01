@@ -1,0 +1,41 @@
+<div class='wrapper' *ngIf="item">
+    <div
+        *ngIf="checkStatus(item)">
+        <a [href]="getVideoLink()" target="_blank" >
+            <img src="{{item.broadcastStandByImage}}">
+        </a>
+        <div class='text-board'>
+        <div class='text-board-title'>
+            {{item.broadcastTitle}}
+        </div>
+        <div class='text-board-info' *ngIf="item.info">
+            <span class='text-board-info-like' *ngIf="item.info.likeTotalCount >= 0">[L] {{item.info.likeTotalCount}}   </span>
+            <span class='text-board-info-viewers'>[V] {{item.info.onAirViewerCount}}</span>
+        </div>
+        <div class='text-board-schedule' 
+            *ngIf="item.broadcastStartAt">
+            {{ item.broadcastStartAt.substring(0,4) + '년 ' + item.broadcastStartAt.substring(4,6) + '월 ' + item.broadcastStartAt.substring(6,8) + '일, ' + item.broadcastStartAt.substring(8,10) + '시 ' + item.broadcastStartAt.substring(10,12) + '분'}}
+        </div>
+        <div class='text-board-broadcaster'>
+            <table>
+                <tr>
+                    <td *ngIf="item.profileImage !== null">
+                        <a href="{{item.broadcasterEndUrl}}" target="_blank">
+                            <img src="{{item.profileImage}}">
+                        </a>
+                    </td>
+                        <a href="{{item.broadcasterEndUrl}}" target="_blank">
+                            {{item.nickname}}
+                        </a>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class='vender-logo image-logo-kakaolive' 
+            [ngClass]="{'image-logo-naverlive': item.platform==='NAVER', 'image-logo-kakaolive': item.platform==='KAKAO'}"
+            (click)="openLink('https://shoppinglive.naver.com/home')"></div>
+        
+    </div>
+</div>
+

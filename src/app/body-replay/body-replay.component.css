@@ -1,0 +1,10 @@
+.center-align {
+    text-align: center;
+}
+
+app-widget-feed-item{
+    display: block;
+    position: relative;
+    width: 21%;
+    margin: 0 auto;
+}

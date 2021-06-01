@@ -1,0 +1,7 @@
+<div class='body center-align'>
+    <app-widget-feed-item
+        *ngFor="let item of feedList"
+        [item]="item"
+        [status]="['NONE', 'STANDBY']">
+    </app-widget-feed-item>
+</div>

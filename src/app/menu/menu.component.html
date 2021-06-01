@@ -1,0 +1,8 @@
+<div class='body'>
+    <div class='text-box'>
+        <li (click)="onSelectItem(1)" *ngIf="!didLogin">로그인</li>
+        <li (click)="onSelectItem(2)" *ngIf="!didLogin">가입</li>
+        <li (click)="onSelectItem(6)" *ngIf="didLogin">내정보</li>
+        <li (click)="onSelectItem(8)" *ngIf="didLogin">로그아웃</li>
+    </div>
+</div>
